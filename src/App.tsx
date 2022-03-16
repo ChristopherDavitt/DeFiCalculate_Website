@@ -14,6 +14,7 @@ export default function App () {
   const location = useLocation()
   return (
     <BrowserRouter>
+      <Navbar />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname} > {/** This should allow for better transitions between pages, but it doesnt work */}
           <Route path="/nodes" element={<NodeCalc />} />
